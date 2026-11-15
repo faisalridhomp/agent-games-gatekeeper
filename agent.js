@@ -38,8 +38,10 @@ function loadEnv() {
   return out;
 }
 const ENV = loadEnv();
-let HMAC_SECRET = ENV.AGENT_GAMES_HMAC_SECRET || '';
-const KURIER_API_KEY = ENV.KURIER_API_KEY || '';
+// Railway injects variables into process.env (no .env file); prefer the
+// environment, fall back to .env for local runs.
+let HMAC_SECRET = process.env.AGENT_GAMES_HMAC_SECRET || ENV.AGENT_GAMES_HMAC_SECRET || '';
+const KURIER_API_KEY = process.env.KURIER_API_KEY || ENV.KURIER_API_KEY || '';
 
 const snarkjs = require(path.join(DIR, 'node_modules', 'snarkjs'));
 const { ethers } = require('ethers');
