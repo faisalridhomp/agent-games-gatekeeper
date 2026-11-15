@@ -1,0 +1,6 @@
+.env
+node_modules/
+*.log
+*-state.json
+cookies.json
+wallet.json
