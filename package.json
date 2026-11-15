@@ -5,5 +5,5 @@
   "main": "agent.js",
   "scripts": { "start": "node agent.js", "watchdog": "node watchdog.js" },
   "license": "MIT",
-  "dependencies": { "snarkjs": "0.7.6" }
+  "dependencies": { "snarkjs": "0.7.6", "ethers": "6.13.4" }
 }

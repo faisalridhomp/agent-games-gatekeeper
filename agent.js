@@ -42,7 +42,7 @@ let HMAC_SECRET = ENV.AGENT_GAMES_HMAC_SECRET || '';
 const KURIER_API_KEY = ENV.KURIER_API_KEY || '';
 
 const snarkjs = require(path.join(DIR, 'node_modules', 'snarkjs'));
-const ethers = require('/home/hatch/workspace/ethers.js');
+const { ethers } = require('ethers');
 
 function log(obj) {
   const line = JSON.stringify({ t: new Date().toISOString(), ...obj }) + '\n';
